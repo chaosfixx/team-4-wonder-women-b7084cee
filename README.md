@@ -11,3 +11,6 @@ Make file contains commands needed.
 * `make test-acceptance` Runs acceptance tests
 
 * `make run` Runs the program
+
+# Replace {YOUR NAME} with your actual name
+echo "{Anna} was here" >> README.md
