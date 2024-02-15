@@ -9,11 +9,11 @@ from levelup.gamemap import GameMap
 
 class TestCharacter(unittest.TestCase):
     def test_initialization(self):
-        testObj = Character()
+        testObj = Character("default")
         assert testObj.name != None
 
     def test_value_change_move_count(self):
-        testObj = Character()
+        testObj = Character("default")
         assert testObj.move_count != None
 
     def test_entermap(self):

@@ -1,11 +1,14 @@
 import logging
 from dataclasses import dataclass
 from enum import Enum
+from levelup.character import Character
 
 #TODO: ADD THINGS YOU NEED FOR STATUS
 @dataclass
 class GameStatus:
     character_name: str = "Character"
+    #character: Character
+
     move_count: int = 0
     running: bool = False
     current_position: tuple = (-100, -100)
@@ -28,6 +31,7 @@ class GameController:
 
     def __init__(self):
         self.status = GameStatus()
+        self.character= Character("default")
 
     def start_game(self):
         pass
