@@ -16,8 +16,10 @@ class TestCharacter(unittest.TestCase):
         testObj = Character()
         assert testObj.move_count != None
 
-    def test_entermap(GameMap):
-        pass
+    def test_entermap(self):
+        testMap = GameMap()
+        assert testMap.status != None
+
 
 
         
