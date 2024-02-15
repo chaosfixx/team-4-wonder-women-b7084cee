@@ -1,3 +1,3 @@
 
 class GameMap:
-    pass
+    status: str = "Default"
