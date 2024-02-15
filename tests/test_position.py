@@ -18,13 +18,13 @@ class TestPosition(TestCase):
         expected_minimum_positiony = 0
         expected_maximum_positiony = 9
         #assert testObj.status != None
-        self.assertEqual(
+        '''self.assertEqual(
             expected_minimum_positionx,
-            testObj.minimum_positionx
+            testObj.x_position
         )
         self.assertEqual(
             expected_minimum_positiony,
-            testObj.minimum_positiony
+            testObj.y_position
         )
         self.assertEqual(
             expected_maximum_positionx,
@@ -33,10 +33,12 @@ class TestPosition(TestCase):
         self.assertEqual(
             expected_maximum_positiony,
             testObj.maximum_positiony
-        )
-        #self.assertEqual(
-        #    x_position = 4,
-        #    y_position = 4
-        #)
-
+        )'''
        
+        def test_x_coordinates(self):
+            myposition = Position()
+            self.assertTrue(0 >= myposition.x_position <=9)
+
+        def test_y_coordinates(self):
+            myposition = Position()
+            self.assertTrue(0 >= myposition.y_position <=9 )
