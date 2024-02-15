@@ -44,6 +44,12 @@ class TestMap(unittest.TestCase):
             testobj.maximum_value
         )
 
+    #def test_initialization (self):
+    #    testmap = GameMap (10,10 (5,5))
+    #   assert testmap.length != None
+    #    assert testmap.width != None
+    #    assert testmap.startingposition !=None
+
     # def y_outofbounds (
     #     if y_maximum_value >= 10 
     #     if y_minimum_value < 0
