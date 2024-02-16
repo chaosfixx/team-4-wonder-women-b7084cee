@@ -8,17 +8,17 @@ from levelup.character import Character
 class GameStatus:
     character_name: str = "Character"
     #character: Character
-
     move_count: int = 0
     running: bool = False
-    current_position: tuple = (-100, -100)
+    current_position: tuple = (4, 4)
 
     def __str__(self) -> str:
         return f"{self.character_name} moved {self.move_count} times."
     
-    def set_character_position(self, xycoordinates: tuple) -> None:
+    def set_character_position(self, xycoordinates: tuple):
         print("Set character position state for testing")
-        #TODO: IMPLEMENT THIS
+        self.current_position=xycoordinates
+        print("Current position: " + str( self.current_position[0] )+ "," +str( self.current_position[1]) )
 
 class Direction(Enum):
     NORTH = "n"
@@ -39,5 +39,31 @@ class GameController:
     def create_character(self, character_name: str) -> None:
         pass
 
-    def move(self, direction: Direction) -> None:
-        pass
+    def move(self, direction: Direction):
+        self.status.set_character_position( GameStatus.current_position)
+        print (direction)
+        if (direction == Direction.NORTH):
+            print ("NORTH" )
+            newtuple = (GameStatus.current_position[0], GameStatus.current_position[1] + 1)
+            #self.status.set_character_position( GameStatus.current_position )
+            self.status.set_character_position( newtuple)
+
+        elif (direction == Direction.SOUTH):
+            print ("SOUTH" )
+            newtuple = (GameStatus.current_position[0], GameStatus.current_position[1] - 1)
+            #self.status.set_character_position( GameStatus.current_position )
+            self.status.set_character_position( newtuple)
+
+        elif (direction == Direction.EAST):
+            print ("EAST" )
+            newtuple = (GameStatus.current_position[0] + 1, GameStatus.current_position[1])
+            #self.status.set_character_position( GameStatus.current_position )
+            self.status.set_character_position( newtuple)
+
+        elif (direction == Direction.WEST):
+            print ("WEST" )
+            newtuple = (GameStatus.current_position[0] - 1, GameStatus.current_position[1])
+            #self.status.set_character_position( GameStatus.current_position )
+            self.status.set_character_position( newtuple)
+           
+        
