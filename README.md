@@ -1,1 +1,1 @@
-![picture1](/config/workspace/images/IMG_2001.HEIC)
+![picture1](./config/workspace/images/IMG_2001.HEIC)
