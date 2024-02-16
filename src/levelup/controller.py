@@ -47,23 +47,31 @@ class GameController:
             newtuple = (GameStatus.current_position[0], GameStatus.current_position[1] + 1)
             #self.status.set_character_position( GameStatus.current_position )
             self.status.set_character_position( newtuple)
+            self.status.move_count = self.status.move_count + 1
+            print ("Current move count: " + str(self.status.move_count) )
 
         elif (direction == Direction.SOUTH):
             print ("SOUTH" )
             newtuple = (GameStatus.current_position[0], GameStatus.current_position[1] - 1)
             #self.status.set_character_position( GameStatus.current_position )
             self.status.set_character_position( newtuple)
+            self.status.move_count = self.status.move_count + 1
+            print ("Current move count: " + str(self.status.move_count) )
 
         elif (direction == Direction.EAST):
             print ("EAST" )
             newtuple = (GameStatus.current_position[0] + 1, GameStatus.current_position[1])
             #self.status.set_character_position( GameStatus.current_position )
             self.status.set_character_position( newtuple)
+            self.status.move_count = self.status.move_count + 1
+            print ("Current move count: " + str(self.status.move_count) )
 
         elif (direction == Direction.WEST):
             print ("WEST" )
             newtuple = (GameStatus.current_position[0] - 1, GameStatus.current_position[1])
             #self.status.set_character_position( GameStatus.current_position )
             self.status.set_character_position( newtuple)
+            self.status.move_count = self.status.move_count + 1
+            print ("Current move count: " + str(self.status.move_count) )
            
         
